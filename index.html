@@ -25,7 +25,7 @@
             <div class="tool" onclick="showtool('booleantables')">
                 Boolean Tables
             </div>
-            <div class="tool">
+            <div class="tool" onclick="showtool('randomvalues')">
                 Random Values
             </div>
         </div>
@@ -99,8 +99,23 @@
             <option value="xor">XOR</option>
             <option value="xnor">XNOR</option>
         </select>
-        <table id="booleantable">
-        </table>
+        <table id="booleantable"></table>
+    </div>
+
+    <div class="container" id="randomvalues">
+        <h1>Random Values</h1>
+        <div class="floatleft">
+            <input type="radio" name="numbermode" value="integer" checked="checked"> Integers <br>
+            <input type="radio" name="numbermode" value="float"> Floats <br>
+        </div>
+        <div class="floatleft" style="padding-left: 10px">
+            <input type="text" name="randomstart" id="randomstart" placeholder="Minimum Value"> <br>
+            <input type="text" name="randomstop" id="randomstop" placeholder="Maximum Value"> <br>
+            <input type="text" name="randomamount" id="randomamount" placeholder="Amount"> <br>
+            <button onclick="randomGenerate()">Generate</button>
+        </div>
+        <div class="clearboth"></div>
+        <table id="randomtable"></table>
     </div>
 
 </body>
@@ -109,6 +124,7 @@
 <script src="basetable.js"></script>
 <script src="combinatorics.js"></script>
 <script src="booleantable.js"></script>
+<script src="randomnumbers.js"></script>
 <script>
 
     /* Function for selecting active tool */
