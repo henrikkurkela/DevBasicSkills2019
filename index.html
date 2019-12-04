@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project Work</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Project Work</h1>
+        <div class="toolgrid">
+            <div class="tool" onclick="showtool('baseconversions')">
+                Base Conversions
+            </div>
+            <div class="tool" onclick="showtool('basetables')">
+                Base Tables
+            </div>
+            <div class="tool" onclick="showtool('combinatorics')">
+                Combinatorics
+            </div>
+            <div class="tool" onclick="showtool('booleantables')">
+                Boolean Tables
+            </div>
+            <div class="tool">
+                Random Values
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="display: block">
+        <h1 style="text-align: center">~ Pick a Tool to Begin ~</h1>
+    </div>
+
+    <div class="container" id="baseconversions">
+        <h1>Base Conversion Tool</h1>
+        <form>
+            <div class="floatleft">
+                <input type="text" id="value"><br>
+                <select name="valuebase" id="valuebase" onchange="triggerBaseConverter()">
+                    <option value="10">Decimal</option>
+                    <option value="2">Binary</option>
+                    <option value="8">Octal</option>
+                    <option value="16">Hexadecimal</option>
+                </select>
+            </div>
+            <div class="floatleft">
+                <h1 class="nomargin">&#8594;</h1>
+            </div>
+            <div class="floatleft">
+                <input type="text" id="result" disabled><br>
+                <select name="resultbase" id="resultbase" onchange="triggerBaseConverter()">
+                    <option value="10">Decimal</option>
+                    <option value="2">Binary</option>
+                    <option value="8">Octal</option>
+                    <option value="16">Hexadecimal</option>
+                </select>
+            </div>
+            <div class="clearboth"></div>
+        </form>
+    </div>
+
+    <div class="container" id="basetables">
+        <h1>Base Tables</h1>
+        <button onclick="generateConversionTable()">Generate</button>
+        <button onclick="generateConversionTable('collapse')">Collapse</button>
+        <table id="basetable">
+        </table>
+    </div>
+
+    <div class="container" id="combinatorics">
+        <h1>Combinatorics</h1>
+        <div class="floatleft">
+            <input type="radio" name="type" value="combinations" checked="checked" onchange="combinatoricsChangeMode()">
+            Combinations <br>
+            <input type="radio" name="type" value="permutations" onchange="combinatoricsChangeMode()"> Permutations <br>
+            <input type="checkbox" name="replacement" id="replacement" disabled> Replacement
+        </div>
+        <div class="floatleft" style="padding-left: 10px">
+            <input type="text" name="n" id="n" placeholder="N"> <br>
+            <input type="text" name="k" id="k" placeholder="K"> <br>
+            <button onclick="combinatoricsCalculate()">Calculate</button>
+            <div id="combinatoricsresult"></div>
+        </div>
+        <div class="clearboth"></div>
+    </div>
+
+    <div class="container" id="booleantables">
+        <h1>Boolean Tables</h1>
+        <select name="booleanoperation" id="booleanoperation" onchange="generateBooleanTable()">
+            <option value="collapse">...</option>
+            <option value="and">AND</option>
+            <option value="nand">NAND</option>
+            <option value="or">OR</option>
+            <option value="nor">NOR</option>
+            <option value="xor">XOR</option>
+            <option value="xnor">XNOR</option>
+        </select>
+        <table id="booleantable">
+        </table>
+    </div>
+
+</body>
+
+<script src="baseconverter.js"></script>
+<script src="basetable.js"></script>
+<script src="combinatorics.js"></script>
+<script src="booleantable.js"></script>
+<script>
+
+    /* Function for selecting active tool */
+    function showtool(selectedtool) {
+        let tools = document.getElementsByClassName("container");
+        for (let i = 0; i < tools.length; i++) {
+            tools[i].style.display = "none";
+        }
+        document.getElementById(selectedtool).style.display = "block";
+        return;
+    }
+
+</script>
+
+</html>
