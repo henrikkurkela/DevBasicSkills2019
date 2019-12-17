@@ -18,6 +18,8 @@ function triggerBaseConverter() {
     let inputbase = document.getElementById("valuebase");
     let resultbase = document.getElementById("resultbase");
     if (input.value == "") {
+        document.getElementById("value").setAttribute("style", "background-color: #5eb8ff;");
+        document.getElementById("result").setAttribute("style", "background-color: #5eb8ff;");
         return;
     } else {
         result.value = baseConverter(input.value, inputbase.value, resultbase.value);
@@ -30,12 +32,18 @@ function baseConverter(value, base, targetbase) {
     try {
         tempvalue = parseInt(value, base);
     } catch (error) {
-        alert("Conversion Failed!");
+        document.getElementById("value").setAttribute("style", "background-color: #9a0007;");
+        document.getElementById("result").setAttribute("style", "background-color: #9a0007;");
         return "ERROR";
     }
     if (tempvalue.toString(targetbase) == "NaN") {
-        alert("Conversion Failed!");
+        document.getElementById("value").setAttribute("style", "background-color: #9a0007;");
+        document.getElementById("result").setAttribute("style", "background-color: #9a0007;");
         return "NaN";
     }
-    else return tempvalue.toString(targetbase);
+    else {
+        document.getElementById("value").setAttribute("style", "background-color: #5eb8ff;");
+        document.getElementById("result").setAttribute("style", "background-color: #5eb8ff;");
+        return tempvalue.toString(targetbase);
+    }
 }

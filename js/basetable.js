@@ -25,3 +25,11 @@ function generateConversionTable(collapse) {
     }
     return;
 }
+function openoverlay() {
+    document.getElementsByClassName("overlay")[0].style.display = "block";
+    generateConversionTable();
+}
+function closeoverlay() {
+    document.getElementsByClassName("overlay")[0].style.display = "none";
+    generateConversionTable('collapse');
+}
