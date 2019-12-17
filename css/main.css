@@ -1,3 +1,6 @@
+/*Set fonts*/
+h1 { font-family: "Open Sans"; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Open Sans"; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Open Sans"; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Open Sans"; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Open Sans"; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+
 html, body {
     position: absolute;
     top: 0;
@@ -7,6 +10,7 @@ html, body {
     padding: 0;
     margin: 0;
     background-color: #0288d1;
+	font-family: Product Sans;
 }
 
 h1 {
@@ -25,19 +29,19 @@ h2 {
 
 .full {
     display: none;
-   -webkit-transition: opacity .5s;
-   -moz-transition: opacity .5s;
-   -o-transition: opacity .5s;
-   transition: opacity .5s;
+   -webkit-transition: opacity 1s;
+   -moz-transition: opacity 1s;
+   -o-transition: opacity 1s;
+   transition: opacity 1s;
 }
 
 .minimal {
     display: inline;
-    transition: height .5s, width .5s, padding .5s, visibility .5s, opacity 0.5s ease-out;
-   -webkit-transition: opacity .5s;
-   -moz-transition: opacity .5s;
-   -o-transition: opacity .5s;
-   transition: opacity .5s;
+    transition: height 1s, width 1s, padding 1s, visibility 1s, opacity 0.5s ease-out;
+   -webkit-transition: opacity 1s;
+   -moz-transition: opacity 1s;
+   -o-transition: opacity 1s;
+   transition: opacity 1s;
 }
 
 .navbtn {
@@ -67,7 +71,7 @@ h2 {
 
 .navbtn:hover {
     background-color: #0288d1;
-    transition: .5s;
+    transition: 1s;
 }
 .navbtn:after {
     content: "";
@@ -83,7 +87,7 @@ h2 {
     background-position: 50%;
     transform: scale(10,10);
     opacity: 0;
-    transition: transform .5s, opacity .5s;
+    transition: transform 1s, opacity 1s;
 }
 
 .navdd {
@@ -113,7 +117,7 @@ h2 {
 
 .navdd-item:hover {
     background-color: #0288d1;
-    transition: .5s;
+    transition: 1s;
 }
 
 .navdd:hover .navdd-content {
@@ -142,7 +146,7 @@ h2 {
 
 .github:hover {
     color: #5eb8ff;
-    transition: .5s;
+    transition: 1s;
 }
 
 .content {
@@ -177,12 +181,12 @@ h2 {
 
 .flex-item:hover .page-button {
     background-color: #0288d1;
-    transition: .5s;
+    transition: 1s;
 }
 
 .flex-item:hover {
     background-color: #0288d1;
-    transition: .5s;
+    transition: 1s;
 }
 
 .page-button {
@@ -191,13 +195,14 @@ h2 {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 10px;
     border-radius: 10px;
+    font-size: large;
 }
 
 .container {
-   -webkit-transition: opacity .5s;
-   -moz-transition: opacity .5s;
-   -o-transition: opacity .5s;
-   transition: opacity .5s;
+   -webkit-transition: opacity 1s;
+   -moz-transition: opacity 1s;
+   -o-transition: opacity 1s;
+   transition: opacity 1s;
 }
 
 form {
@@ -276,4 +281,10 @@ input[type=checkbox] {
 
 ::placeholder {
     color: #fff;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .wrap {
+        flex-direction: column;
+    }
 }
