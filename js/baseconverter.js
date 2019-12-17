@@ -1,5 +1,5 @@
 /* Set up Event Listener for Enter key in Base Converter Tool */
-document.getElementById("value").addEventListener("keyup", function (event) {
+document.getElementById("value").addEventListener("keyup", function(event) {
     let input = document.getElementById("value");
     let result = document.getElementById("result");
     let inputbase = document.getElementById("valuebase");
@@ -40,8 +40,7 @@ function baseConverter(value, base, targetbase) {
         document.getElementById("value").setAttribute("style", "background-color: #9a0007;");
         document.getElementById("result").setAttribute("style", "background-color: #9a0007;");
         return "NaN";
-    }
-    else {
+    } else {
         document.getElementById("value").setAttribute("style", "background-color: #5eb8ff;");
         document.getElementById("result").setAttribute("style", "background-color: #5eb8ff;");
         return tempvalue.toString(targetbase);
