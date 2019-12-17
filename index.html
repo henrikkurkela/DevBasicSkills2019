@@ -113,7 +113,9 @@
                             </select>
                         </div>
                         <div class="flex-item">
-                            <h2>&#8594;</h2>
+                            <div class="arrow">
+                                <h2>&#8594;</h2>
+                            </div>
                         </div>
                         <div class="flex-item">
                             <input type="text" id="result" disabled><br>
@@ -143,21 +145,42 @@
                     </center>
                 </div>
                 <div class="container page-3" title="Combinatorics" style="opacity: 0; display: none">
-                    <center>
+                <center>
                     <h2>Combinatorics</h2>
                     <div class="wrap">
                     <div class="flex-item" style="flex-shrink: 1" >
-                        <input type="radio" name="type" value="combinations" checked="checked" onchange="combinatoricsChangeMode()">
-                        Combinations <br>
-                        <input type="radio" name="type" value="permutations" onchange="combinatoricsChangeMode()"> Permutations <br>
-                        <input type="checkbox" name="replacement" id="replacement" disabled> Replacement
+                            <div style="font-size: medium; color: #fff;">
+                                <label class="radio-button">
+                                    <input type="radio" name="type" value="combinations" checked="checked" onchange="combinatoricsChangeMode()">
+                                    <span class="label-visible">
+                                        <span class="fake-radiobutton"></span>
+                                        Combinations
+                                    </span>
+                                </label>
+                                <label class="radio-button">
+                                    <input type="radio" name="type" value="permutations" onchange="combinatoricsChangeMode()">
+                                    <span class="label-visible">
+                                        <span class="fake-radiobutton"></span>
+                                        Permutations
+                                    </span>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="replacement" id="replacement" disabled>
+                                    <span class="label-visible">
+                                        <span class="fake-checkbox"></span>
+                                        Replacement
+                                    </span>
+                                </label>
+                            </div>
                     </div>
                     <div class="flex-item">
                         <input type="text" name="n" id="n" placeholder="N"> <br>
                         <input type="text" name="k" id="k" placeholder="K"> <br>
                     </div>
-                    <div class="flex-item">
+                    <div class="flex-item" style="color: #fff; font-size: 20px;">
                         <button class="navbtn stdbtn" onclick="combinatoricsCalculate()">Calculate</button>
+                        <br>
+                        Output:
                         <br>
                         <div id="combinatoricsresult" style="color: #fff; font-size: 20px;"></div>
                     </div>
@@ -167,7 +190,7 @@
                 <div class="container page-4" title="Boolean Tables" style="opacity: 0; display: none">
                     <center>
                     <h2>Boolean Tables</h2>
-                    <select name="booleanoperation" id="booleanoperation" onchange="generateBooleanTable()" style="width: 50%; font-size: 20px;">
+                    <select class="selectfull" name="booleanoperation" id="booleanoperation" onchange="generateBooleanTable()" style="width: 25%; font-size: 20px;">
                         <option value="collapse">...</option>
                         <option value="and">AND</option>
                         <option value="nand">NAND</option>
@@ -184,18 +207,35 @@
                     <h2>Random Values</h2>
                     <div class="wrap">
                     <div class="flex-item">
-                        <input type="radio" name="numbermode" value="integer" checked="checked"> Integers <br>
-                        <input type="radio" name="numbermode" value="float"> Floats <br>
+                        <div style="font-size: medium; color: #fff;">
+                        <label class="radio-button">
+                            <input type="radio" name="numbermode" value="integer" checked="checked">
+                            <span class="label-visible">
+                                <span class="fake-radiobutton"></span>
+                                Integers
+                            </span>
+                        </label>
+                        <label class="radio-button">
+                            <input type="radio" name="numbermode" value="float">
+                            <span class="label-visible">
+                                <span class="fake-radiobutton"></span>
+                                Floats
+                                </span>
+                        </label>
+                        </div>
                     </div>
                     <div class="flex-item">
                         <input type="text" name="randomstart" id="randomstart" placeholder="Minimum Value"> <br>
                         <input type="text" name="randomstop" id="randomstop" placeholder="Maximum Value"> <br>
                         <input type="text" name="randomamount" id="randomamount" placeholder="Amount"> <br>
                     </div>
-                    <div class="flex-item">
+                    <div class="flex-item" style="color: #fff; font-size: 20px;">
                         <button class="navbtn stdbtn" onclick="randomGenerate()">Generate</button>
+                        <br>
+                        Output:
+                        <br>
+                        <table id="randomtable" style="color: #fff; font-size: 20px;"></table>
                     </div>
-                    <table id="randomtable" style="color: #fff; font-size: 20px;"></table>
                     </div>
                     </center>
                 </div>
