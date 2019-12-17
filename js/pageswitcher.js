@@ -21,10 +21,15 @@ function switchpage(selected) {
         }, this.animationDelay + 20); 
         full.style.display = "none";
         full.style.opacity = 0;
-        footer.style.display = "inherit";
-        setTimeout(() => {
-            footer.style.opacity = 1;
-        }, this.animationDelay + 20); 
+        if (currentpage == "container page-home") {
+            footer.style.display = "inherit";
+            setTimeout(() => {
+                footer.style.opacity = 1;
+            }, this.animationDelay + 20); 
+        } else {
+            footer.style.display = "none";
+            footer.style.opacity = 0;
+        }
     } else {
         full.style.display = "inline";
         setTimeout(() => {
