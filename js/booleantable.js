@@ -27,6 +27,7 @@ function generateBooleanTable() {
                         break;
                     case "nand":
                         cell.innerHTML = !(i && j);
+                        break;
                     case "or":
                         cell.innerHTML = !!(i || j);
                         break;
