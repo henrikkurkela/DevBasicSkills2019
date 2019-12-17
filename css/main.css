@@ -25,19 +25,19 @@ h2 {
 
 .full {
     display: none;
-   -webkit-transition: opacity 1s;
-   -moz-transition: opacity 1s;
-   -o-transition: opacity 1s;
-   transition: opacity 1s;
+   -webkit-transition: opacity .5s;
+   -moz-transition: opacity .5s;
+   -o-transition: opacity .5s;
+   transition: opacity .5s;
 }
 
 .minimal {
     display: inline;
-    transition: height 1s, width 1s, padding 1s, visibility 1s, opacity 0.5s ease-out;
-   -webkit-transition: opacity 1s;
-   -moz-transition: opacity 1s;
-   -o-transition: opacity 1s;
-   transition: opacity 1s;
+    transition: height .5s, width .5s, padding .5s, visibility .5s, opacity 0.5s ease-out;
+   -webkit-transition: opacity .5s;
+   -moz-transition: opacity .5s;
+   -o-transition: opacity .5s;
+   transition: opacity .5s;
 }
 
 .navbtn {
@@ -67,7 +67,7 @@ h2 {
 
 .navbtn:hover {
     background-color: #0288d1;
-    transition: 1.0s;
+    transition: .5s;
 }
 .navbtn:after {
     content: "";
@@ -83,7 +83,7 @@ h2 {
     background-position: 50%;
     transform: scale(10,10);
     opacity: 0;
-    transition: transform .5s, opacity 1s;
+    transition: transform .5s, opacity .5s;
 }
 
 .navdd {
@@ -113,7 +113,7 @@ h2 {
 
 .navdd-item:hover {
     background-color: #0288d1;
-    transition: 1.0s;
+    transition: .5s;
 }
 
 .navdd:hover .navdd-content {
@@ -142,7 +142,7 @@ h2 {
 
 .github:hover {
     color: #5eb8ff;
-    transition: 1.0s;
+    transition: .5s;
 }
 
 .content {
@@ -177,12 +177,12 @@ h2 {
 
 .flex-item:hover .page-button {
     background-color: #0288d1;
-    transition: 1.0s;
+    transition: .5s;
 }
 
 .flex-item:hover {
     background-color: #0288d1;
-    transition: 1.0s;
+    transition: .5s;
 }
 
 .page-button {
@@ -194,10 +194,10 @@ h2 {
 }
 
 .container {
-   -webkit-transition: opacity 1s;
-   -moz-transition: opacity 1s;
-   -o-transition: opacity 1s;
-   transition: opacity 1s;
+   -webkit-transition: opacity .5s;
+   -moz-transition: opacity .5s;
+   -o-transition: opacity .5s;
+   transition: opacity .5s;
 }
 
 form {
